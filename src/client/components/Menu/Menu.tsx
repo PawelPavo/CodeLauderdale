@@ -1,23 +1,23 @@
 //@ts-nocheck
-
 import React from 'react';
 import { StyledMenu } from './Menu.styled';
+import { NavLink } from 'react-router-dom';
 
 const Menu: React.FC<IMenuProps> = (props) => {
   return (
     <StyledMenu open={props.open}>
-      <a href="/">
-        
-        About us
-      </a>
-      <a href="/">
-        
-        Pricing
-        </a>
-      <a href="/">
-        
-        Contact
-        </a>
+      <div>
+        <NavLink
+          className="text-decoration-none"
+          exact to="/"
+        >Home</NavLink>
+      </div>
+      <div>
+        <NavLink
+          className="text-decoration-none"
+          exact to="/blogs"
+        >Blogs</NavLink>
+      </div>
     </StyledMenu>
   )
 }
