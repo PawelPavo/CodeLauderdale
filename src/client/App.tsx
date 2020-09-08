@@ -1,36 +1,21 @@
 import * as React from 'react';
 
-class App extends React.Component<IAppProps, IAppState> {
-	constructor(props: IAppProps) {
-		super(props);
-		this.state = {
-			name: null
-		};
-	}
+const App: React.FC<IAppProps> = () => {
+	const [name, setName] = React.useState<string>('')
 
-	async componentDidMount() {
-		try {
-			let r = await fetch('/api/hello');
-			let name = await r.json();
-			this.setState({ name });
-		} catch (error) {
-			console.log(error);
-		}
-	}
+	React.useEffect(() => {
+		fetch('/api/hello')
+			.then(response => response.json())
+			.then(data => setName(data))
+	}, [])
 
-	render() {
-		return (
-			<main className="container my-5">
-				<h1 className="text-primary text-center">Hello {this.state.name}!</h1>
-			</main>
-		);
-	}
+	return (
+		<main className="container my-5">
+			<h1 className="text-primary text-center">Code {name}!</h1>
+		</main>
+	)
 }
 
-export interface IAppProps {}
-
-export interface IAppState {
-	name: string;
-}
+export interface IAppProps { }
 
 export default App;
