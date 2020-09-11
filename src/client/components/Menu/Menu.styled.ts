@@ -8,6 +8,7 @@ export const StyledMenu = styled.nav`
   background: ${({ theme }) => theme.primaryLight};
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   height: 100vh;
+  width: 40vh;
   text-align: left;
   padding: 2rem;
   position: absolute;
@@ -20,10 +21,9 @@ export const StyledMenu = styled.nav`
   }
 
   div {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     padding: 2rem 0;
-    font-weight: bold;
     letter-spacing: 0.5rem;
     color: ${({ theme }) => theme.primaryDark};
     text-decoration: none;

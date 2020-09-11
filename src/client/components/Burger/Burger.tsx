@@ -7,7 +7,7 @@ const Burger: React.FC<IBurgerProps> = (props) => {
 
     return (
         <>
-            <StyledBurger open={props.open} onClick={() => props.setOpen(!props.open)}>
+            <StyledBurger open={props.open} onClick={() => props.setOpen(!props.open)} >
                 <div />
                 <div />
                 <div />

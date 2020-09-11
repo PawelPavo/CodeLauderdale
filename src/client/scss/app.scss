@@ -2,4 +2,16 @@ $theme-colors: (
     'primary': #0091ea //Covalence Blue!  :D
 );
 
+.hide-mobile {
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+  
+  .hide-desktop {
+    @media not all and (max-width: 480px) {
+      display: none;
+    }
+  }
+
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';

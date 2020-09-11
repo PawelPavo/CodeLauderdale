@@ -3,7 +3,9 @@ import React from 'react';
 import { StyledMenu } from './Menu.styled';
 import { NavLink } from 'react-router-dom';
 
+
 const Menu: React.FC<IMenuProps> = (props) => {
+
   return (
     <StyledMenu open={props.open}>
       <div>
