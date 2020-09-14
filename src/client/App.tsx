@@ -18,10 +18,8 @@ const App: React.FC<IAppProps> = () => {
 		<ThemeProvider theme={theme}>
 			<BrowserRouter>
 				<GlobalStyles />
-				<div ref={node}>
 					<Burger open={open} setOpen={setOpen} />
 					<Menu open={open} setOpen={setOpen} />
-				</div>
 				<Switch>
 					<Route exact path="/">
 						<div ref={node}>
